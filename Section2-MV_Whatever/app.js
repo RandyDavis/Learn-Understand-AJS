@@ -2,7 +2,7 @@
 var myApp = angular.module('myApp', []);
 
 // CONTROLLERS
-myApp.controller('mainCtrl', function () {
+myApp.controller('MainController', function () {
   
 });
 
