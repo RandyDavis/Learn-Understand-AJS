@@ -1,12 +1,11 @@
-var Person = function(firstname, lastname) {
-  this.firstname = firstname;
-  this.lastname = lastname;
-};
+var myApp = angular.module('myApp', []);
 
-function logPerson(person) {
-  console.log(john);
-}
-
-var john = new Person("John", "Doe");
-
-logPerson(john);
+myApp.controller('MainController', function($scope) {
+  $scope.name = "Randy";
+  $scope.occupation = "Web Developer";
+  $scope.getName = function() {
+    return ("Randy");
+  };
+  $scope.getName();
+  console.log($scope);
+});
