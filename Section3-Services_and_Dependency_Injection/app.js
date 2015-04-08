@@ -1,10 +1,14 @@
-var things = [
-    1
-  , '2'
-  , function() {
-    console.log("Hello!");
-  }
-];
+var myApp = angular.module('myApp', []);
 
-things[2]();
-console.log(things);
+// myApp.controller('MainController', ['$scope', '$log', function($scope, $log) {
+
+
+//   $log.info($scope);
+
+
+// }]);
+
+
+// Minified version of above code
+// -must keep order of array items the same to match intended order of the function parameters
+myApp.controller("MainController",["$scope","$log",function(o,n){n.info(o)}]);
