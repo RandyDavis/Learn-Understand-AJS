@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" ng-app="myApp">
+<html lang="en-us">
     <head>
         <title>Introduction to AngularJS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -18,7 +18,6 @@
         <script src="//code.angularjs.org/1.3.0-rc.1/angular.min.js"></script>
         <script src="//code.angularjs.org/1.3.0-rc.1/angular-messages.min.js"></script>
         <script src="//code.angularjs.org/1.3.0-rc.1/angular-resource.min.js"></script>
-        <script src="app.js"></script>
     </head>
     <body>
 
@@ -38,17 +37,6 @@
 
         <div class="container">
 
-            <div ng-controller="MainController">
-            
-                <div>
-                    <label for="">What is your twitter handle?</label>
-                    <input type="text" placeholder="@your_twitter_handle" ng-model="handle">
-                </div><hr>
-
-                <a href="http://twitter.com{{'/' + lowercasehandle() }}">twitter.com/{{ lowercasehandle() }}</a>
-        
-            </div>
-
             <div class="row">
                 <div class="col-md-12">
                     <input type="text" id="name">
@@ -57,6 +45,12 @@
 
 
         </div>
+
+
+
+        
+        <script src="app.js"></script>
+        <script src="aside.js"></script>
         <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     </body>
 </html>
