@@ -39,9 +39,14 @@
         <div class="container">
 
             <div ng-controller="MainController">
-                
-                <h1>Hello {{ name + '.  How are you?' }}</h1>
+            
+                <div>
+                    <label for="">What is your twitter handle?</label>
+                    <input type="text" placeholder="@your_twitter_handle" ng-model="handle">
+                </div><hr>
 
+                <a href="http://twitter.com{{'/' + lowercasehandle() }}">twitter.com/{{ lowercasehandle() }}</a>
+        
                 
             </div>
 
