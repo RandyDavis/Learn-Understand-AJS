@@ -43,9 +43,27 @@
                 <div>
                     <label for="">What is your twitter handle?</label>
                     <input type="text" placeholder="@your_twitter_handle" ng-model="handle">
-                </div><hr>
+                </div>
+
+                <div class="alert" ng-class="{ 'alert-warning': handle.length < characters, 'alert-success': handle.length >= characters }" ng-show="handle.length !== characters">
+                    <div ng-show="handle.length < characters">
+                        You have less than 5 characters!
+                    </div>
+                    <div ng-show="handle.length > characters">
+                        You have more than 5 characters!
+                    </div>
+                </div>
+                
+                <hr>
 
                 <a href="http://twitter.com{{'/' + lowercasehandle() }}">twitter.com/{{ lowercasehandle() }}</a>
+
+                <h3>Rules</h3>
+                <ul>
+                    <li ng-repeat="rule in rules">
+                        {{ rule.rulename }}
+                    </li>
+                </ul>
         
             </div>
 
