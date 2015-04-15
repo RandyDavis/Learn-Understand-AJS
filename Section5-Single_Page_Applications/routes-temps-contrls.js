@@ -29,6 +29,9 @@ myApp.config(function ($routeProvider) {
 myApp.controller('mainController', ['$scope', '$log', function($scope, $log) {
     
     $scope.name = 'Main';
+
+    $log.main = 'Property from main';
+    $log.log($scope);
     
 }]);
 
@@ -36,11 +39,14 @@ myApp.controller('secondController', ['$scope', '$log', '$routeParams', function
     
     $scope.num = $routeParams.num;
     $scope.name = $scope.num;
+
     
 }]);
 
 myApp.controller('myController', ['$scope', '$log', function($scope, $log) {
   $scope.name = 'MyContrlr';
+  $log.third = 'Property from third';
+  $log.log($scope);
 }]);
 
 myApp.controller('LastController', ['$scope', '$log', function($scope, $log) {
