@@ -24,7 +24,7 @@ myApp.service('nameService', function() {
 myApp.controller('MainController', ['$scope', '$log', 'nameService', function($scope, $log, nameService) {
   $scope.name = nameService.name;
 
-  $scope.watch('name', function() {
+  $scope.$watch('name', function() {
     nameService.name = $scope.name;
   });
 
@@ -36,5 +36,9 @@ myApp.controller('SecondController', ['$scope', '$log', '$routeParams', 'nameSer
   $scope.num = $routeParams.num || 1;
 
   $scope.name = nameService.name;
+
+  $scope.$watch('name', function() {
+    nameService.name = $scope.name;
+  });
 
 }]);
