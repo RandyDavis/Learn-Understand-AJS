@@ -32,8 +32,9 @@ myApp.directive('searchResult', [function () {
     templateUrl: 'directives/searchresult.html',
     replace: true,
     scope: {
-      personName: "@",
-      personAddress: "@"
+      // personName: "@",  // @ symbol means "text" or 1-way binding
+      // personAddress: "@"
+      personObject: "="    // = sign means 2-way binding
     }
   };
 }]);
