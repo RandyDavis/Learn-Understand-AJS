@@ -60,16 +60,7 @@ myApp.directive('searchResult', [function () {
       personObject: "=",    // = sign means 2-way binding
       formattedAddressFunction: "&"  // & sign means it is a function
     },
-    link: function(scope, elements, attrs) {
-      console.log('Linking...');
-
-      console.log(scope);
-
-      if(scope.personObject.name == 'Janet Doe') {
-        elements.removeAttr('class');
-      }
-      console.log(elements);
-    }
+    transclude: true
   };
 }]);
 

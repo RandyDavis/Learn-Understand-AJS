@@ -3,4 +3,10 @@
   <p class="list-group-item-text">
     {{ formattedAddressFunction({ aperson: personObject }) }}  <!-- pass an object map to get values of function -->
   </p>
+  <!-- TRANSCLUSION IMPLEMENTATION -->
+  <!-- <small>
+    <ng-transclude></ng-transclude>
+  </small> -->
+  <!-- or like this way, either produces desired transclusion of element -->
+  <small ng-transclude></small>
 </a>
