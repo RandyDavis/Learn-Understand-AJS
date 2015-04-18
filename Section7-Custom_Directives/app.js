@@ -59,6 +59,37 @@ myApp.directive('searchResult', [function () {
       // personAddress: "@"
       personObject: "=",    // = sign means 2-way binding
       formattedAddressFunction: "&"  // & sign means it is a function
+    },
+    compile: function(elem, attrs) {
+      console.log('Compiling...');
+      // elem.removeAttr('class');
+      console.log(elem);
+
+      return {
+        // pre: function(scope, elements, attrs) {
+        //   console.log('Pre-linking...');
+        //   console.log(elements);
+        // },  // ANGULAR JS says to avoid pre-link as it's not safe
+
+        post: function(scope, elements, attrs) {
+          console.log('Post-linking...');
+
+          console.log(scope);
+
+          if(scope.personObject.name == 'Janet Doe') {
+            elements.removeAttr('class');
+          }
+          console.log(elements);
+        }
+      };
     }
   };
 }]);
+
+
+
+
+
+
+
+
