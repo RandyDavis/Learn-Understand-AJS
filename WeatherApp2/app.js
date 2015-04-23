@@ -18,11 +18,29 @@ weatherApp2.config(function($routeProvider) {
     .otherwise({ redirectTo: '/' });
 });
 
+// SERVICES
+weatherApp2.service('cityService', function() {
+  this.city = "Austin, TX";
+});
+
+
+
+
 // CONTROLLERS
-weatherApp2.controller('HomeCtrl', ['$scope', function ($scope) {
-  
+weatherApp2.controller('HomeCtrl', ['$scope', 'cityService', function ($scope, cityService) {
+  $scope.city = cityService.city;
+
+  $scope.$watch('city', function() {
+    cityService.city = $scope.city;
+  });
 }]);
 
-weatherApp2.controller('ForecastCtrl', ['$scope', function ($scope) {
-  
+weatherApp2.controller('ForecastCtrl', ['$scope', 'cityService', function ($scope, cityService) {
+  $scope.city = cityService.city;
 }]);
+
+
+
+
+
+// DIRECTIVES
