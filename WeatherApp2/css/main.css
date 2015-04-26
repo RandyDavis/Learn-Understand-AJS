@@ -1,0 +1,109 @@
+body { 
+  background: url("../images/beach-pier.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*********************************************
+*               NAV BAR STYLES
+/*********************************************/
+.navbar-header .navbar-brand {
+  font-family: 'Tangerine', cursive;
+  color: rgba(119,94,90,1);
+  font-size: 300%;
+}
+
+.navbar-nav li a {
+  font-family: 'Tangerine', cursive;
+  color: rgba(119,94,90,1);
+  font-size: 250%;
+}
+
+.navbar-nav ul li a:hover {
+  color: red;
+}
+
+
+
+/*********************************************
+*               HOME PAGE STYLES
+/*********************************************/
+
+h4 {
+  /*font-family: 'Source Sans Pro', sans-serif;*/font-family: 'Tangerine', cursive;
+  font-size: 500%;
+  margin-top: 70px;
+  color: #fff;
+}
+
+#city-input {
+  /*border: none;*/
+  background-color: transparent;
+  color: rgba(119,94,90,1);
+  border-bottom: 2px solid rgba(119,94,90,1);
+  height: 50px;
+  font-size: 200%;
+}
+
+#city-input:focus {
+  background-color: #fff;
+  /*font-size: 250%;*/
+}
+
+.btn-primary {
+  font-family: 'Tangerine', cursive;
+  font-size: 250%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+
+
+/*********************************************
+*               FORECAST PAGE STYLES
+/*********************************************/
+#city-info {
+  font-family: 'Tangerine', cursive;
+  font-size: 500%;
+  color: rgba(119,94,90,1);
+}
+
+a.bg-primary {
+  padding: 5px;
+  background-color: rgba(119,94,90,1);
+}
+
+.panel-title {
+  background-color: rgba(254, 254, 254, .2);
+}
+
+.panel-body {
+  background-color: rgba(254, 254, 254, .2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
